@@ -1,4 +1,4 @@
- var createError = require('http-errors');
+var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -10,6 +10,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var multer = require('multer');
 var upload = multer({dest: './uploads'});
 var flash = require('connect-flash');
+var bcrypt = require('bcryptjs');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
